@@ -1,0 +1,260 @@
+:root {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --background-color1: rgb(187, 25, 25);
+    --gradient-background1: linear-gradient(rgb(36, 33, 56), rgb(94, 84, 141), rgb(36, 33, 56));
+    --box-shadow: 0 10px 10px black;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    background-color: var(--background-color1);
+    height: 80px;
+    height: minmax(80px, 120px);
+    padding: 10px 50px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--background-color1);
+    height: 6vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 50px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+h5, .contact-div > h4 {
+    margin-left: 15px;
+}
+
+h1, h2, h3 {
+    letter-spacing: 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    border: 3px solid black;
+}
+
+h4 > a {
+    color: black;
+}
+
+img {
+    object-fit: cover;
+}
+
+#about {
+    width: 100%;
+    height: 100vh;
+    background: var(--gradient-background1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact {
+    background: var(--gradient-background1);
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#work {
+    padding: 50px 0;
+    width: 100%;
+    background-color: var(--background-color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#work > article {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-auto-rows: 60vh;
+    justify-content: center;
+}
+
+#contact-items {
+    margin-top: 50px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    justify-content: center;
+}
+
+#presentation {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#nav-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    align-items: center;
+    justify-content: center;
+}
+
+#logo_jimv {
+    height: 100%;
+}
+
+#figure-logo {
+    height: 60px;
+}
+
+#subtitle {
+    color: maroon;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+.contact-div {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: Verdana;
+}
+
+.project-div {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+}
+
+.project-figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+}
+
+.project-figcaption {
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    text-align: center;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 5px;
+}
+
+.project-figure:hover, .nav-link:hover, .contact-div:hover {
+    transform: scale(1.1);
+    transition: 0.35s ease-in-out;
+} 
+
+@media (max-width: 900px) and (min-width: 450px){
+    :root {
+        font-size: 16px;
+    }
+
+    #figure-logo {
+        height: 50px;
+    }
+
+    #work > article {
+        grid-template-columns: repeat(2, 45%);
+        grid-auto-rows: 50vh;
+    }
+
+    #contact-items {
+        display: grid;
+        grid-template-columns: 250px;
+        grid-auto-rows: 70px;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    :root {
+        font-size: 10px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 90px;
+    }
+
+    #figure-logo {
+        height: 40px;
+    }
+
+    #nav-bar {
+        display: grid;
+        grid-template-columns: repeat(3, 60px);
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contact-items {
+        display: grid;
+        grid-template-columns: 100px;
+        grid-auto-rows: 70px;
+        justify-content: center;
+    }
+
+    #work > article {
+        grid-template-columns: 90%;
+        grid-auto-rows: 40vh;
+    }
+
+    .project-figure {
+        aspect-ratio: 1 / 1;
+    }
+}
