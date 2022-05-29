@@ -75,9 +75,10 @@ img {
     height: 100vh;
     background: var(--gradient-background1);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    padding: 150px;
 }
 
 #contact {
@@ -118,7 +119,8 @@ img {
 
 #presentation {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    animation: presentation-animation 3s linear 1;
 }
 
 #nav-bar {
@@ -141,6 +143,10 @@ img {
     font-weight: bold;
     font-size: 1.3rem;
     text-decoration: underline;
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    animation: subtitle-animation 3s linear 1;
 }
 
 .contact-div {
@@ -175,6 +181,10 @@ img {
     flex-direction: column;
 }
 
+.project-figure > a {
+    height: 100%
+}
+
 .project-image {
     width: 100%;
     height: 100%;
@@ -183,9 +193,9 @@ img {
 .project-figcaption {
     width: 100%;
     height: 10%;
-    background-color: black;
     text-align: center;
     text-decoration: none;
+    background-color: black;
     color: whitesmoke;
     padding: 5px;
 }
@@ -195,9 +205,14 @@ img {
     transition: 0.35s ease-in-out;
 } 
 
+
 @media (max-width: 900px) and (min-width: 450px){
     :root {
         font-size: 16px;
+    }
+
+    #about {
+        padding: 50px
     }
 
     #figure-logo {
@@ -256,5 +271,33 @@ img {
 
     .project-figure {
         aspect-ratio: 1 / 1;
+    }
+}
+
+@keyframes presentation-animation {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes subtitle-animation {
+    0% {
+        left: -100%;
+    }
+
+    75% {
+        left: -100%;
+    }
+
+    100% {
+        left: 40%;
     }
 }
